@@ -1,60 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- css properties -->
+  <!-- css spacing -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SheCodes Week1 Lesson12</title>
+    <title>SheCodes Week1 Lesson13</title>
     <style>
+      body {
+        background-color: #f5f0fe;
+      }
       h1 {
         font-size: 48px;
         font-weight: 100;
-        position: relative;
-        background: linear-gradient(
-          179.2deg,
-          rgb(34, 34, 34) 0%,
-          rgb(8, 0, 153) 29.7%,
-          rgb(118, 6, 166) 63.4%,
-          rgba(233, 0, 64, 0.58) 100.1%
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        text-decoration: underline;
+        color: #885df1;
+        text-align: center;
       }
 
-      h1::before {
-        content: "";
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        left: 0;
-        height: 5px;
-        border-radius: 2px;
-        background: linear-gradient(111.3deg, #9c27b0 9.6%, #00bcd4 93.6%);
-      }
       h2 {
         text-align: center;
         font-family: Georgia, "Times New Roman", Times, fantasy;
         font-size: 30px;
-        font-style: oblique;
-        text-decoration: wavy;
-        background: linear-gradient(
-          109.8deg,
-          rgb(238, 9, 121) 42.8%,
-          rgb(255, 106, 0) 83.3%,
-          rgb(232, 129, 166) 29.6%,
-          rgb(111, 71, 133) 14.6%
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        font-style: normal;
+        color: #272044;
       }
-      .cute-text {
-        display: flex;
-        justify-content: center;
+      button {
+        padding: 15px 20px;
+        background-color: transparent;
+        color: #885df1;
+        font-size: 16px;
+        display: block;
+        margin: 20px auto;
       }
 
+      img {
+        display: block;
+        margin: 30px auto;
+      }
+      h4 {
+        text-align: center;
+        color: rgb(81, 6, 77);
+      }
+      h6 {
+        text-align: center;
+        color: #885df1;
+      }
       .cuteCoders {
         background: radial-gradient(
           circle at 12.3% 19.3%,
@@ -97,10 +88,9 @@
     </style>
   </head>
   <body>
-    <div class="cute-text">
-      <h1>SheCodes</h1>
-    </div>
+    <h1>SheCodes</h1>
     <h2>Coding Workshop</h2>
+    <button>Apply Now</button>
     <ul>
       <li>
         <a
