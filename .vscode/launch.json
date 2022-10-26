@@ -8,7 +8,7 @@
       "type": "chrome",
       "request": "launch",
       "name": "Launch Chrome against localhost",
-      "url": "D:/Windows2022/Documents/SheCodes/SheCodes/index.html",
+      "url": "D:/Windows2022/Documents/SheCodes/SheCodes/lessson12_week1.html",
       "webRoot": "${workspaceFolder}"
     }
   ]
