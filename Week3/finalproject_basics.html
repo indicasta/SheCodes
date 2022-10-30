@@ -58,7 +58,6 @@
           rgba(255, 136, 102, 0.67) -53.1%,
           rgba(255, 221, 136, 0.28) 49%
         );
-
         justify-content: center;
         align-items: center;
       }
@@ -87,8 +86,6 @@
         margin: 20px auto;
         padding: 16px 24px;
         font-size: 60px;
-        /* box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0; */
-        /* box-shadow: 3px 3px rgb(122, 66, 66), -0.4em 0 0.6em rgb(120, 78, 19); */
         box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
         opacity: 1;
         transition: all 200ms ease-in-out;
@@ -110,8 +107,8 @@
 
       .cute_hr {
         max-width: 800px;
-        height: 5px;
-        background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/516/original/coffeebeanWood.jpg?1666999002");
+        height: 10px;
+        background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/519/original/beansFlag.jpg?1666999109");
       }
       .mainImg {
         display: block;
@@ -139,10 +136,41 @@
         font-size: 20px;
         font-weight: bold;
       }
+      .waviy {
+        position: relative;
+        display: inline;
+      }
+      .waviy span {
+        position: relative;
+        display: inline-block;
+        font-size: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        animation: flip 2s infinite;
+        animation-delay: calc(0.1s * var(--i));
+      }
+      @keyframes flip {
+        0%,
+        80% {
+          transform: rotateY(360deg);
+        }
+      }
+      .highlight {
+        color: #d41414;
+      }
     </style>
   </head>
   <body>
-    <h1>The Best Coffee ​☕ of the World 🌎</h1>
+    <h1>
+      The Best Coffee
+      <div class="waviy">
+        <span style="--i: 1">​☕ </span>
+      </div>
+      of the World
+      <div class="waviy">
+        <span style="--i: 2">🌎</span>
+      </div>
+    </h1>
     <img
       src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/517/original/cafe-cubano.jpg?1666999046"
       alt="Cuban Coffee"
@@ -157,12 +185,12 @@
     </h2>
     <hr class="cute_hr" />
     <p>
-      Drinking Cuban coffee is a rite of passage for any coffee lover. The
-      special brew is famed to be the strongest and the best, and for good
-      reason. With Cuban coffee, the maxim
+      Drinking <span class="highlight">Cuban Coffee</span> is a rite of passage
+      for any coffee lover. The special brew is famed to be the strongest and
+      the best, and for good reason. With Cuban coffee, the maxim
       <strong>“quality over quantity”</strong> holds even more true.
     </p>
-    <span class="row">
+    <div class="row">
       <img
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/518/original/CupFlag.jpg?1666999078"
         alt="Cuban Coffee"
@@ -173,7 +201,7 @@
         alt="Cuban Coffee"
         class="pairImg"
       />
-    </span>
+    </div>
     <p>
       In most cases, a single serving in a <strong>“tacita”</strong>, a tiny cup
       traditionally used for serving Cuban coffee, contains enough caffeine and
@@ -196,18 +224,20 @@
     <button>Try a Cup</button>
     <hr class="cute_hr" />
     <footer>
-      <a href="mailto:indicasta@gmail.com">Coded by IndiCasta 👩🏾‍💻</a>
+      <a href="mailto:indicasta@gmail.com" class="cuteLink"
+        >Coded by IndiCasta 👩🏾‍💻</a
+      >
     </footer>
     <script>
       function isNull(name) {
         return name.length === 0;
       }
       function onClick() {
-        let name = prompt("Hello! What's your first name?");
+        let name = prompt("Hello! What's your first name?") || "";
         let message;
         if (isNull(name)) message = "Hi!, no name, no coffee!❌☕";
         else {
-          message = `Welcome, ${name}🤗! Let's enjoy a good cup of coffee!☕🤎`;
+          message = `Welcome, ${name}🤗! Let's enjoy a good cup of cuban coffee!☕🤎`;
         }
         alert(message);
       }
