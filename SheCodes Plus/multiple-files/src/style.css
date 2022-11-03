@@ -20,11 +20,8 @@ h2 {
   padding: 0 0 24px;
 }
 footer {
-  font-size: 16px;
-  display: block;
-  margin: 0 auto;
+  text-align: center;
 }
-
 button {
   border-radius: 25px;
   border: 1px solid #8064e9;
@@ -58,4 +55,17 @@ span.limited-spots {
 
 div.button-container {
   margin: 60px 0;
+}
+footer a {
+  color: #5e41a7;
+}
+footer a:hover {
+  color: #ad9af5;
+}
+.about-img img {
+  display: block;
+  margin: 80px auto;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 51px 25px rgba(142, 97, 255, 0.71);
 }
