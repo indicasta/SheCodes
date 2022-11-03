@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/045/original/sushi-icon.png?1667316403"
+      sizes="192x192"
+    />
+    <title>Sushi🍣</title>
+    <style>
+      body {
+        background: linear-gradient(
+          179.1deg,
+          rgb(247, 238, 238) -1.9%,
+          rgb(247, 202, 201) 44.9%,
+          rgb(145, 168, 208) 96.1%
+        );
+      }
+      h1 {
+        text-align: center;
+      }
+      .wrapper {
+        width: 600px;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 25px auto;
+      }
+      img {
+        max-width: 100%;
+      }
+      button {
+        display: block;
+        margin: 10px auto;
+        border: 1px solid rgb(175, 29, 141);
+        border-radius: 15px;
+        font-size: 24px;
+        padding: 10px 15px;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+        cursor: pointer;
+      }
+      footer {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 18px;
+      }
+      .btnTheme {
+        background: linear-gradient(to right, #000, rgb(60, 3, 3));
+        color: white;
+        padding: 5px 8px;
+        font-size: 16px;
+      }
+      .btnTheme:hover {
+        background: linear-gradient(to left, rgb(237, 107, 107), #ffff);
+        color: #000;
+      }
+      .specialink {
+        width: 100%;
+        border-radius: 15px;
+        transition: filter 150ms ease-in-out, scale 100ms ease-in;
+      }
+      .specialink:hover {
+        filter: contrast(50%);
+        transform: scale(0.8);
+      }
+      .img-container {
+        display: grid;
+        grid-template-columns: repeat(5, 150px);
+        grid-template-rows: repeat(5, 90px);
+        grid-column-gap: 10px;
+        grid-row-gap: 20px;
+        margin: 20px;
+      }
+      .spiral > img {
+        width: 100%;
+        max-height: 190px;
+        border-radius: 10px;
+        box-shadow: 6px 7px 21px 0px rgba(20, 128, 10, 1);
+        transition: rotate 1s ease-in-out scale 250ms ease-in;
+      }
+      .spiral:hover {
+        transform: rotate(10deg) scale(1.5);
+      }
+      .central:hover {
+        transform: scale(1.2);
+      }
+      .div1 {
+        grid-area: 3 / 1 / 4 / 2;
+      }
+      .div2 {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      .div3 {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+      .div4 {
+        grid-area: 1 / 3 / 2 / 4;
+      }
+      .div5 {
+        grid-area: 1 / 4 / 2 / 5;
+      }
+      .div6 {
+        grid-area: 2 / 5 / 3 / 6;
+      }
+      .div7 {
+        grid-area: 3 / 5 / 4 / 6;
+      }
+      .div8 {
+        grid-area: 4 / 4 / 5 / 5;
+      }
+      .div9 {
+        grid-area: 4 / 3 / 5 / 4;
+      }
+      .div10 {
+        grid-area: 4 / 2 / 5 / 3;
+      }
+      .div11 {
+        grid-area: 2 / 2 / 4 / 5;
+      }
+    </style>
+  </head>
+  <body class="light">
+    <button class="btnTheme">Change Theme</button>
+    <div class="wrapper">
+      <h1>Sushi🍣</h1>
+      <a href="https://en.wikipedia.org/wiki/Sushi" target="blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/050/original/tropicalSushi2.jpg?1667316472"
+          alt="Sushi Tropical"
+          class="specialink"
+        />
+      </a>
+      <p>
+        Traditional Japanese sushi is known to be quite low in both calories and
+        fat. This is because it only makes use of three to four ingredients that
+        are packed with minerals and vitamins. On most occasions, sushi is only
+        fish and rice. In fact, in Japan, they try to only use the freshest fish
+        possible from the local market. They will only add light seasonings of
+        wasabi so that they can enjoy the natural flavours of the fish. Many
+        sushi restaurants will even choose their menus based on the best days to
+        catch fish. On the other hand, Western sushi tends to be larger in size
+        because it includes many more ingredients, toppings, and condiments.
+        These ingredients are often high in fat such as tempura, tempura flakes,
+        avocado, mayonnaise, and cream cheese. Because of this, Western sushi
+        has significantly more calories than traditional Japanese sushi does.
+        Rice is also an ingredient that differs between the two. Sushi rice in
+        Japan is known to be white, short, and glutinous which is also clear and
+        chewy. However, some Western sushi restaurants have been known to
+        replace white rice with brown rice or even quinoa to appeal to the
+        health fanatics. Western sushi is often more complex than traditional
+        Japanese sushi because it is all about strong colours and bold flavours,
+        two combinations you may not really find at traditional sushi
+        restaurants.
+      </p>
+      <div class="img-container">
+        <div class="div1 spiral">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/062/original/sushi1.jpg?1667316646"
+            alt=""
+          />
+        </div>
+        <div class="div2 spiral">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/061/original/sushi2.jpg?1667316635"
+            alt=""
+          />
+        </div>
+        <div class="div3 spiral">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/060/original/sushi3.jpg?1667316618"
+            alt=""
+          />
+        </div>
+        <div class="4 spiral">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/059/original/sushi4.jpg?1667316604"
+            alt=""
+          />
+        </div>
+        <div class="div5 spiral">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/057/original/sushi6.jpg?1667316565"
+            alt=""
+          />
+        </div>
+        <div class="div6 spiral">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/056/original/sushi7.jpg?1667316548"
+            alt=""
+          />
+        </div>
+        <div class="div7 spiral">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/055/original/sushi8.jpg?1667316538"
+            alt=""
+          />
+        </div>
+        <div class="div11 spiral">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/054/original/sushi9.jpg?1667316528"
+            alt=""
+          />
+        </div>
+        <div class="div12 spiral">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/053/original/sushi10.jpg?1667316516"
+            alt=""
+          />
+        </div>
+        <div class="div10 spiral">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/052/original/sushi11.jpg?1667316506"
+            alt=""
+          />
+        </div>
+        <div class="div8 spiral">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/049/original/tropicalSushi5.jpg?1667316456"
+            alt=""
+          />
+        </div>
+        <div class="div9 spiral">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/047/original/tropicalSushi7.jpg?1667316435"
+            alt=""
+          />
+        </div>
+      </div>
+      <button>Try Sushi🍱</button>
+    </div>
+    <footer>
+      <a href="mailto:indicasta@gmail.com" class="cuteLink"
+        >Coded by IndiCasta 👩🏾‍💻</a
+      >
+    </footer>
+  </body>
+</html>
