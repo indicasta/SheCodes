@@ -13,7 +13,70 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400;500;600;700;800&display=swap" />
 <script src="https://kit.fontawesome.com/74f0ec7ef2.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script src="./src/functions.js"></script>
+<script>
+  $(function() {
+    var cities = [
+      "Albacete",
+      "Alicante",
+      "Almería",
+      "Ávila",
+      "Badajoz",
+      "Barcelona",
+      "Bilbao",
+      "Burgos",
+      "Cáceres",
+      "Cádiz",
+      "Castellón de la Plana",
+      "Ceuta",
+      "Ciudad Real",
+      "Córdoba",
+      "Cuenca",
+      "Gerona",
+      "Granada",
+      "Guadalajara",
+      "Huelva",
+      "Huesca",
+      "Jaén",
+      "La Coruña",
+      "Las Palmas de Gran Canaria",
+      "León",
+      "Lérida",
+      "Logroño",
+      "Lugo",
+      "Madrid",
+      "Málaga",
+      "Melilla",
+      "Murcia",
+      "Orense",
+      "Oviedo",
+      "Palencia",
+      "Palma de Mallorca",
+      "Pamplona",
+      "Pontevedra",
+      "Salamanca",
+      "San Sebastián",
+      "Santa Cruz de Tenerife",
+      "Santander",
+      "Segovia",
+      "Sevilla",
+      "Soria",
+      "Tarragona",
+      "Teruel",
+      "Toledo",
+      "Valencia",
+      "Valladolid",
+      "Vitoria",
+      "Zamora",
+      "Zaragoza",
+    ];
+    $("#city").autocomplete({
+      source: cities,
+    });
+  });
+</script>
 </head>
 <body>
   <div>
@@ -25,18 +88,13 @@
         >
           Barcelona
         </h1>
-        <div class="col-md-3 opacity-25">
+        <div class="ui-widget col-md-3 opacity-25">
           <input
             type="text"
             class="form-control"
-            id="validationCustom03 txtCharacter"
-            onkeypress="return isNumericKey(event)"
-            name="city"
-            autocomplete="on"
-            role="combobox"
+            id="city"
             placeholder="Search for location"
-            value=""
-            required
+            
           />
         </div>
 

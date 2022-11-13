@@ -17,3 +17,11 @@ h1.text-properties {
   -webkit-text-fill-color: transparent;
   font-size: 30px;
 }
+.btn-group button{
+  border: 5px solid transparent;
+  
+}
+.btn-group button:hover{
+  border: 5px solid #f9a826;
+  border-radius: 15px !important;
+}

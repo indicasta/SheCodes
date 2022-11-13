@@ -1,6 +1,9 @@
-function isNumericKey(evt) {
+function isAlphaKey(evt) {
   var charCode = evt.which ? evt.which : evt.keyCode;
-  if (charCode > 64 && charCode > 32 && (charCode < 91 || charCode > 96))
-    return true;
-  return false;
+  return (
+    (charCode >= 65 && charCode <= 90)
+    || (charCode >= 97 && charCode <= 122)
+    || charCode === 209 
+    || charCode === 241
+  );
 }
