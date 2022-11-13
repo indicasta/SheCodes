@@ -7,7 +7,7 @@
 <title>Weather Forecast App🌤</title>
 <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="styles/style.css" />
 <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -69,12 +69,16 @@
       "Toledo",
       "Valencia",
       "Valladolid",
+      "Vigo",
       "Vitoria",
       "Zamora",
       "Zaragoza",
     ];
     $("#city").autocomplete({
       source: cities,
+      close: function (event, ui) { 
+        $(".selected-city").html($("#city").val());
+      },
     });
   });
 </script>
@@ -85,17 +89,22 @@
       <img src="img/sun-hands.svg" class="card-img" alt="weather Forecast" />
       <div class="card-img-overlay">
         <h1
-          class="card-title position-absolute top-0 end-0 me-3 mt-3 text-properties"
+          class="selected-city card-title position-absolute top-0 end-0 me-3 mt-3 text-properties"
         >
           Barcelona
         </h1>
-        <div class="ui-widget col-md-3 opacity-25">
+        <div class="col-md-3 opacity-25">
           <input
             type="text"
             class="form-control"
             id="city"
+            onkeypress="return isAlphaKey(event)"
+            name="city"
+            autocomplete="on"
+            role="combobox"
             placeholder="Search for location"
-            
+            value=""
+            required
           />
         </div>
 
