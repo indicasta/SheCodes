@@ -17,71 +17,6 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script src="./src/functions.js"></script>
-<script>
-  $(function() {
-    var cities = [
-      "Albacete",
-      "Alicante",
-      "Almería",
-      "Ávila",
-      "Badajoz",
-      "Barcelona",
-      "Bilbao",
-      "Burgos",
-      "Cáceres",
-      "Cádiz",
-      "Castellón de la Plana",
-      "Ceuta",
-      "Ciudad Real",
-      "Córdoba",
-      "Cuenca",
-      "Gerona",
-      "Granada",
-      "Guadalajara",
-      "Huelva",
-      "Huesca",
-      "Jaén",
-      "La Coruña",
-      "Las Palmas de Gran Canaria",
-      "León",
-      "Lérida",
-      "Logroño",
-      "Lugo",
-      "Madrid",
-      "Málaga",
-      "Melilla",
-      "Murcia",
-      "Orense",
-      "Oviedo",
-      "Palencia",
-      "Palma de Mallorca",
-      "Pamplona",
-      "Pontevedra",
-      "Salamanca",
-      "San Sebastián",
-      "Santa Cruz de Tenerife",
-      "Santander",
-      "Segovia",
-      "Sevilla",
-      "Soria",
-      "Tarragona",
-      "Teruel",
-      "Toledo",
-      "Valencia",
-      "Valladolid",
-      "Vigo",
-      "Vitoria",
-      "Zamora",
-      "Zaragoza",
-    ];
-    $("#city").autocomplete({
-      source: cities,
-      close: function (event, ui) { 
-        $(".selected-city").html($("#city").val());
-      },
-    });
-  });
-</script>
 </head>
 <body>
   <div>
@@ -93,7 +28,7 @@
         >
           Barcelona
         </h1>
-        <div class="col-md-3 opacity-25">
+        <div class="col-md-2 opacity-25">
           <input
             type="text"
             class="form-control"
@@ -102,7 +37,7 @@
             name="city"
             autocomplete="on"
             role="combobox"
-            placeholder="Search for location"
+            placeholder="Location"
             value=""
             required
           />
@@ -114,7 +49,7 @@
         >
           <div class="card-body text-center text-properties">
             <h4>Monday</h4>
-            <h5 class="card-title">14th November 2022</h5>
+            <h5 class="current-date card-title">14th November 2022</h5>
             <p>
               CURRENT WEATHER <br />
               <small>21.20H</small>
@@ -195,5 +130,73 @@
       </div>
     </div>
   </div>
+  <script>
+  $(function() {
+    var cities = [
+      "Albacete",
+      "Alicante",
+      "Almería",
+      "Ávila",
+      "Badajoz",
+      "Barcelona",
+      "Bilbao",
+      "Burgos",
+      "Cáceres",
+      "Cádiz",
+      "Ceuta",
+      "Ciudad Real",
+      "Córdoba",
+      "Cuenca",
+      "Formentera",
+      "Gerona",
+      "Granada",
+      "Guadalajara",
+      "Huelva",
+      "Huesca",
+      "Jaén",
+      "La Coruña",
+      "Gran Canaria",
+      "León",
+      "Lérida",
+      "Logroño",
+      "Lugo",
+      "Madrid",
+      "Málaga",
+      "Melilla",
+      "Murcia",
+      "Orense",
+      "Oviedo",
+      "Palencia",
+      "Mallorca",
+      "Pamplona",
+      "Pontevedra",
+      "Salamanca",
+      "San Sebastián",
+      "Santander",
+      "Segovia",
+      "Sevilla",
+      "Soria",
+      "Tarragona",
+      "Tenerife",
+      "Teruel",
+      "Toledo",
+      "Torrevieja",
+      "Valencia",
+      "Valladolid",
+      "Vigo",
+      "Vitoria",
+      "Zamora",
+      "Zaragoza",
+    ];
+    $("#city").autocomplete({
+      source: cities,
+      close: function (event, ui) { 
+        $(".selected-city").html($("#city").val());
+      },
+    });
+  });
+  const date = new Date();
+  console.log(date); 
+</script>
 </body>
 </html>
