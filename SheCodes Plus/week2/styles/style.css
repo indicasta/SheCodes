@@ -21,7 +21,10 @@ h1.text-properties {
   border: 5px solid transparent;
   
 }
-.btn-group button:hover{
+.btn-group button:hover {
   border: 5px solid #f9a826;
   border-radius: 15px !important;
+}
+.ui-menu-item-wrapper {
+  color: #f9a826;
 }
