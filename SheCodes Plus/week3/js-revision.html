@@ -1,0 +1,21 @@
+<!-- When the page loads, ask for the applicant first name using a prompt. Alert 'Welcome, [First name]' Bonus: If user does not enter her first name, Alert 'Too bad for you’ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Revision 👩🏾‍💻</title>
+  </head>
+  <body>
+    <h1>JavaScript Revision 👸🏾</h1>
+    <script>
+      let userName = prompt("Hello! What's your name?").trim();
+      if (userName.length > 0) {
+        alert(`Welcome, ${userName}! 🙋🏾‍♀️`);
+      } else {
+        alert("Too bad for you! 🤷🏾‍♀️");
+      }
+    </script>
+  </body>
+</html>

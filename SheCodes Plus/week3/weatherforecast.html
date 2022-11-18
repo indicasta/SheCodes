@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast App🌤</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400;500;600;700;800&display=swap"
+    />
+    <script src="https://kit.fontawesome.com/74f0ec7ef2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./src/functions.js"></script>
+    <script src="src/index.js"></script>
+  </head>
+  <body>
+    <div>
+      <div class="card text-bg-dark" style="max-width: 940px">
+        <img
+          src="img/sun-hands.svg"
+          class="card-img opacity-75"
+          alt="weather Forecast"
+        />
+        <div class="card-img-overlay">
+          <div class="row">
+            <div class="col-3">
+              <h1
+                class="selected-city card-title position-absolute top-0 end-0 me-4 px-2 mt-3 text-properties"
+              >
+                Barcelona
+              </h1>
+
+              <div
+                class="card text-bg-dark opacity-75 mb-1 position-absolute top-50 end-0 translate-middle-y rounded-pill"
+                style="max-width: 20rem"
+              >
+                <div class="card-body text-center text-properties">
+                  <h4>Monday</h4>
+                  <p>CURRENT WEATHER</p>
+                  <p class="card-text fw-bold temperature">
+                    <i class="fa-solid fa-temperature-three-quarters"></i> 16°C
+                    (61°F) /
+                    <small>13°C (55°F)</small>
+                  </p>
+                  <p class="clouds">
+                    <i class="fa-solid fa-cloud-moon"></i> CLOUDY
+                  </p>
+                  <p class="fw-bold feelsLike">
+                    <i class="fa-solid fa-temperature-low"></i>FEELS LIKE: 16°C
+                    (61°F)
+                  </p>
+                  <p class="humidity">
+                    <i class="fa-solid fa-droplet"></i> HUMIDITY: 94%
+                  </p>
+                  <p class="wind">
+                    <i class="fa-solid fa-wind"> </i> WIND: 5 km/h
+                  </p>
+                  <p class="precipitation">
+                    <i class="fa-solid fa-cloud-showers-heavy"></i>
+                    PRECIPITATION: 0%
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="col-md-3 opacity-25">
+              <input
+                type="text"
+                class="form-control"
+                id="city"
+                onkeypress="return isAlphaKey(event)"
+                name="city"
+                autocomplete="on"
+                role="combobox"
+                placeholder="Search for Location"
+                value=""
+                required
+              />
+            </div>
+
+            <div
+              class="btn-group mb-5 col-md-6 position-absolute bottom-0 start-0"
+              role="group"
+              aria-label="Days group"
+            >
+              <button type="button" class="btn btn-dark cols-2 text-properties">
+                Tuesday
+                <p>
+                  <i class="fa-solid fa-cloud-sun"></i>
+                  21°C <br />
+                  12°C
+                </p>
+              </button>
+              <button type="button" class="btn btn-dark cols-2 text-properties">
+                Wednesday
+                <p>
+                  <i class="fa-solid fa-cloud-rain"></i>
+                  <br />
+                  18°C <br />
+                  10°C
+                </p>
+              </button>
+              <button type="button" class="btn btn-dark cols-2 text-properties">
+                Thursday
+                <p>
+                  <i class="fa-solid fa-cloud-sun-rain"></i>
+                  <br />
+                  16°C <br />
+                  8°C
+                </p>
+              </button>
+              <button type="button" class="btn btn-dark cols-2 text-properties">
+                Friday
+                <p>
+                  <i class="fa-solid fa-cloud-bolt"></i>
+                  <br />
+                  18°C <br />
+                  10°C
+                </p>
+              </button>
+              <button type="button" class="btn btn-dark cols-2 text-properties">
+                Saturday
+                <p>
+                  <i class="fa-solid fa-umbrella"></i>
+                  <br />
+                  15°C <br />
+                  5°C
+                </p>
+              </button>
+              <button type="button" class="btn btn-dark cols-2 text-properties">
+                Sunday
+                <p>
+                  <i class="fa-solid fa-sun"></i>
+                  <br />
+                  28°C <br />
+                  20°C
+                </p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
