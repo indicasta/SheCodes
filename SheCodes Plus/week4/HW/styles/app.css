@@ -1,0 +1,53 @@
+.text-properties {
+  background-image: linear-gradient(60deg, #f13863, #f9a826);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Sono", sans-serif;
+}
+h1.text-properties {
+  font-family: "Dancing Script";
+  font-size: 75px;
+  font-weight: 700;
+}
+.text-properties p i {
+  background-image: linear-gradient(75deg, hsl(203, 85%, 63%), #153ce8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+}
+.btn-group button {
+  border: 5px solid transparent;
+}
+.btn-group button:hover {
+  border: 5px solid #f9a826;
+  border-radius: 15px !important;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.div-search {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.div-buttons {
+  grid-area: 3 / 1 / 4 / 5;
+}
+.div-city {
+  grid-area: 1 / 5 / 2 / 7;
+}
+.div-weather {
+  grid-area: 2 / 5 / 4 / 7;
+  max-width: 350px;
+}

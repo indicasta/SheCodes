@@ -91,12 +91,6 @@
     <div class="container">
       <div class="parent">
         <div class="row card text-bg-dark">
-          <img
-            src="img/sun-hands.svg"
-            class="card-img opacity-50"
-            alt="weather Forecast"
-          />
-
           <div class="div-city">
             <h1
               class="selected-city card-title card-img-overlay position-absolute end-0 me-2 mt-5 px-1 text-properties"
@@ -123,7 +117,9 @@
             />
           </div>
 
-          <div class="div-forecast card-body text-center text-properties">
+          <div
+            class="div-forecast card-body cols-6 text-center text-properties"
+          >
             <h4 id="day" class="text-properties"></h4>
             <h4 id="date" class="text-properties"></h4>
             <h5 id="time" class="text-properties"></h5>
@@ -148,7 +144,7 @@
           </div>
 
           <div
-            class="div-buttons col-xs-4 row btn-group position-absolute bottom-0 start-0 card-img-overlay"
+            class="div-buttons cols-6 row btn-group position-absolute bottom-0 start-0 card-img-overlay"
             role="group"
             aria-label="Days group"
           >
