@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast App🌤</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="https://kit.fontawesome.com/74f0ec7ef2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="src/functions.js"></script>
+    <script src="src/index.js"></script>
+    <style>
+      .parent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+      }
+
+      .div-city {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      .div-search {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+      .div-forecast {
+        grid-area: 2 / 1 / 3 / 3;
+      }
+      .div-buttons {
+        grid-area: 3 / 1 / 4 / 3;
+      }
+      @media (min-width: 768px) {
+        .parent {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(4, 1fr);
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+        }
+
+        .div-city {
+          grid-area: 1 / 3 / 2 / 4;
+        }
+        .div-search {
+          grid-area: 1 / 1 / 2 / 2;
+        }
+        .div-forecast {
+          grid-area: 2 / 3 / 5 / 4;
+        }
+        .div-buttons {
+          grid-area: 4 / 1 / 5 / 3;
+        }
+      }
+      .div-city {
+        background-color: transparent;
+      }
+      .div-search {
+        background-color: transparent;
+      }
+      .div-forecast {
+        background-color: transparent;
+      }
+      .div-buttons {
+        background-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="parent">
+        <div class="row card text-bg-dark">
+          <img
+            src="img/sun-hands.svg"
+            class="card-img opacity-50"
+            alt="weather Forecast"
+          />
+
+          <div class="div-city">
+            <h1
+              class="selected-city card-title card-img-overlay position-absolute end-0 me-2 mt-5 px-1 text-properties"
+            >
+              Barcelona
+            </h1>
+          </div>
+
+          <div
+            class="div-search opacity-25 card-img-overlay position-absolute start-0"
+          >
+            <input
+              type="text"
+              class="form-control"
+              id="city"
+              onkeypress="return isAlphaKey(event)"
+              name="city"
+              autocomplete="on"
+              autofocus="on"
+              role="combobox"
+              placeholder="Search for Location"
+              value=""
+              required
+            />
+          </div>
+
+          <div class="div-forecast card-body text-center text-properties">
+            <h4 id="day" class="text-properties"></h4>
+            <h4 id="date" class="text-properties"></h4>
+            <h5 id="time" class="text-properties"></h5>
+            <p>CURRENT WEATHER</p>
+            <p class="card-text fw-bold">
+              <i class="fa-solid fa-temperature-three-quarters"></i>
+              <span class="temperature">16</span><span class="units">°C|</span
+              ><button class="units" id="unit">°F</button>
+            </p>
+            <p class="clouds"><i class="fa-solid fa-cloud-moon"></i> CLOUDY</p>
+            <p class="fw-bold feelsLike" id="feelsLike">
+              <i class="fa-solid fa-temperature-low"></i>FEELS LIKE: 16°C
+            </p>
+            <p class="humidity">
+              <i class="fa-solid fa-droplet"></i> HUMIDITY: 94%
+            </p>
+            <p class="wind"><i class="fa-solid fa-wind"> </i> WIND: 5 km/h</p>
+            <p class="precipitation">
+              <i class="fa-solid fa-cloud-showers-heavy"></i>
+              PRECIPITATION: 0%
+            </p>
+          </div>
+
+          <div
+            class="div-buttons col-xs-4 row btn-group position-absolute bottom-0 start-0 card-img-overlay"
+            role="group"
+            aria-label="Days group"
+          >
+            <button type="button" class="btn btn-dark text-properties">
+              Tuesday
+              <p>
+                <i class="fa-solid fa-cloud-sun"></i>
+                21°C <br />
+                12°C
+              </p>
+            </button>
+            <button type="button" class="btn btn-dark text-properties">
+              Wednesday
+              <p>
+                <i class="fa-solid fa-cloud-rain"></i>
+                <br />
+                18°C <br />
+                10°C
+              </p>
+            </button>
+            <button type="button" class="btn btn-dark text-properties">
+              Thursday
+              <p>
+                <i class="fa-solid fa-cloud-sun-rain"></i>
+                <br />
+                16°C <br />
+                8°C
+              </p>
+            </button>
+            <button type="button" class="btn btn-dark text-properties">
+              Friday
+              <p>
+                <i class="fa-solid fa-cloud-bolt"></i>
+                <br />
+                18°C <br />
+                10°C
+              </p>
+            </button>
+            <button type="button" class="btn btn-dark text-properties">
+              Saturday
+              <p>
+                <i class="fa-solid fa-umbrella"></i>
+                <br />
+                15°C <br />
+                5°C
+              </p>
+            </button>
+            <button type="button" class="btn btn-dark text-properties">
+              Sunday
+              <p>
+                <i class="fa-solid fa-sun"></i>
+                <br />
+                28°C <br />
+                20°C
+              </p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
