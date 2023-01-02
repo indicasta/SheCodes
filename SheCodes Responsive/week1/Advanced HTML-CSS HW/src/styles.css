@@ -1,0 +1,109 @@
+:root {
+  --background-color: linear-gradient(
+    90.4deg,
+    rgb(248, 52, 246) 0.6%,
+    rgb(152, 38, 252) 90%
+  );
+  --background-h1-color: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+  --background-h3-color: linear-gradient(
+    to right,
+    rgb(37, 197, 197) 25%,
+    rgb(90, 201, 31) 50%,
+    rgb(193, 197, 234) 75%
+  );
+  --box-shadow-style: 12px 12px 11px -3px rgba(12, 58, 128, 1);
+  --font-clear-color: #d9d5e8;
+}
+body {
+  font-family: sans-serif;
+  background-image: var(--background-color);
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-family: "Sono", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 94px;
+  line-height: 1.2;
+  background-image: var(--background-h1-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  background-image: var(--background-h3-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 34px;
+}
+h2 {
+  color: var(--font-clear-color);
+  font-size: 54px;
+  line-height: 1.2;
+}
+
+.presentation {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+a {
+  text-decoration: none;
+  padding: 20px 15px;
+  margin: 20px;
+  border: solid;
+  border-radius: 10px;
+}
+
+#contact a {
+  background-image: var(--background-color);
+  box-shadow: var(--box-shadow-style);
+  font-weight: 800;
+}
+#contact-mail a {
+  border: none;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 0px;
+}
+#contact-mail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#homepage-link {
+  border: none;
+  text-align: center;
+  color: var(--font-clear-color);
+  display: flex;
+  justify-content: center;
+}
+p {
+  font-weight: 300;
+  font-size: 24px;
+  text-align: justify;
+  padding: 25px;
+  margin: 20px;
+  background: var(--background-color);
+}
+#about-info {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px 250px;
+}
