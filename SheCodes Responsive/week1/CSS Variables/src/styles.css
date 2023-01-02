@@ -1,0 +1,60 @@
+:root {
+  --background-color: radial-gradient(
+    circle at 7.5% 24%,
+    rgb(237, 161, 193) 0%,
+    rgb(250, 178, 172) 25.5%,
+    rgb(190, 228, 210) 62.3%,
+    rgb(215, 248, 247) 93.8%
+  );
+  --background-h1-color: linear-gradient(
+    to right,
+    rgb(89, 223, 11) 25%,
+    rgb(51, 139, 147) 50%,
+    rgb(8, 90, 98) 80%
+  );
+  --background-h3-color: linear-gradient(
+    to right,
+    rgb(37, 197, 197) 3%,
+    rgb(24, 93, 88) 8%,
+    rgb(4, 10, 66) 15%
+  );
+  --box-shadow-style: 12px 12px 11px -3px rgba(12, 58, 128, 1);
+}
+body {
+  font-family: sans-serif;
+  padding: 0 20px;
+  background-image: var(--background-color);
+}
+
+h1 {
+  text-align: center;
+  font-weight: 900;
+  margin: 0;
+  font-size: 34px;
+  line-height: 48px;
+  background-image: var(--background-h1-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Sono", sans-serif;
+}
+
+h3 {
+  background-image: var(--background-h3-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Sono", sans-serif;
+}
+h2 {
+  color: #231d3c;
+}
+
+.logo {
+  display: block;
+  margin: 30px auto;
+  width: 150px;
+}
+p {
+  box-shadow: var(--box-shadow-style);
+}
