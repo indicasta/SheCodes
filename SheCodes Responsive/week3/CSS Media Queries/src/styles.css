@@ -1,0 +1,33 @@
+@media (max-width: 576px) {
+  h4 {
+    color: blue;
+    text-align: center;
+  }
+  .logo-to-hide {
+    display: none;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 900;
+  margin: 0;
+  font-size: 34px;
+  line-height: 48px;
+}
+
+h1 h2,
+h3 {
+  color: #231d3c;
+}
+
+.logo {
+  display: block;
+  margin: 30px auto;
+  width: 150px;
+}
