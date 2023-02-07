@@ -1,0 +1,255 @@
+.App svg {
+  display: none;
+}
+.App #condition {
+  margin-top: -18px;
+}
+/* .App alert {
+  background-image: linear-gradient(
+    to right,
+    #f13863 0%,
+    #f6d365 33%,
+    #fda085 66%,
+    #1e190a 100%
+  );
+} */
+@media (max-width: 767px) {
+  .wrapper {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 10px 5px !important;
+  }
+  h1.textProperties {
+    font-size: 22px !important;
+    font-weight: 900 !important;
+    margin-top: 10px !important;
+    padding-top: 5px !important;
+    margin-left: 50px !important;
+  }
+  .card-body,
+  .card-title {
+    text-align: center !important;
+  }
+  .textProperties h4 {
+    font-size: 10px !important;
+  }
+  .textProperties p {
+    font-size: 8px !important;
+  }
+  .textProperties h5 {
+    font-size: 8px !important;
+  }
+  #forecast,
+  #forecast2 {
+    padding-left: 2px !important;
+    margin-right: 2px !important;
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+  }
+  #day {
+    font-size: 14px !important;
+  }
+  #date {
+    font-size: 12px !important;
+  }
+  #condition {
+    font-size: 8px !important;
+    margin-bottom: 2px !important;
+  }
+  #condition i {
+    font-size: 18px !important;
+  }
+  #thermo {
+    font-size: 16px !important;
+  }
+  .temperature {
+    font-size: 18px !important;
+  }
+  .units {
+    position: relative;
+    top: -6px !important;
+    font-size: 10px !important;
+  }
+  .textProperties i {
+    font-size: 16px !important;
+  }
+  .forecast-temp-max {
+    font-size: 12px !important;
+  }
+  .forecast-temp-max i {
+    font-size: 12px !important;
+  }
+  .forecast-temp-min {
+    font-size: 11px !important;
+  }
+  .forecast-temp-min i {
+    font-size: 11px !important;
+  }
+  #error-notFound {
+    font-size: 8px !important;
+    margin: 5px 10px !important;
+    padding: 1px 1px !important;
+  }
+  .current {
+    max-width: 300px !important;
+    margin: 0px !important;
+    margin-left: 120px !important;
+    padding-left: 2px !important;
+    padding-right: 0px !important;
+  }
+  .current-date {
+    margin: 5px 0 !important;
+  }
+  .current-forecast {
+    margin: 5px 0 !important;
+  }
+  .form-control {
+    max-width: 140px !important;
+    padding: 2px !important;
+    font-size: 12px !important;
+  }
+  svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  #current-weather {
+    padding: 1px !important;
+    margin: 0px 1px !important;
+  }
+  .forecast {
+    font-size: 8px !important;
+  }
+  .card-footer {
+    font-size: 12px !important;
+  }
+}
+.wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+  border: 1px solid #f13863;
+}
+.textProperties,
+.temperature,
+.units {
+  background-image: linear-gradient(60deg, #f13863, #f9a826);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Sono", sans-serif;
+}
+.textProperties h1 {
+  font-family: "Dancing Script";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  display: block;
+  text-align: center;
+  margin-left: 30px;
+}
+.textProperties p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.textProperties h4 {
+  font-size: 14px;
+}
+.textProperties h5 {
+  font-size: 12px;
+}
+#day {
+  font-size: 20px;
+}
+#date {
+  font-size: 16px;
+}
+#current-weather {
+  border-radius: 10px !important;
+  background-image: linear-gradient(60deg, #f13863, #f9a826) !important;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: #000;
+  font-weight: 900;
+}
+#condition {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+#condition i {
+  font-size: 40px;
+}
+
+#thermo {
+  font-size: 35px;
+}
+.temperature {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.units {
+  position: relative;
+  top: -18px;
+  font-size: 20px;
+}
+#unit {
+  background-color: transparent;
+  border: none;
+  font-weight: 700;
+}
+.textProperties i {
+  background-image: linear-gradient(75deg, hsl(203, 85%, 63%), #153ce8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
+}
+.card-link {
+  position: relative;
+}
+#precipitation,
+#feelsLike,
+#wind {
+  white-space: nowrap;
+}
+.forecast i {
+  font-size: 32px;
+}
+.forecast-temp-max {
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.forecast-temp-max i,
+.forecast-temp-min i {
+  font-size: 24px;
+}
+.forecast-temp-min {
+  font-size: 16px;
+  font-size: 900;
+  white-space: nowrap;
+}
+.current {
+  max-width: 320px;
+  margin-top: 10px !important;
+}
+
+.current-date {
+  margin: 10px 0;
+}
+.current-forecast {
+  margin: 15px 0;
+}
+.current-cond {
+  margin: 15px 0 !important;
+}
+#error-notFound {
+  max-width: fit-content;
+  align-items: center;
+  margin-left: 8px;
+}
+.card-body {
+  padding-top: 0px;
+  padding-right: 8px;
+  margin-left: 30px;
+}

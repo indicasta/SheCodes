@@ -1,0 +1,14 @@
+.App h1 {
+  text-align: center;
+  font-weight: 900;
+  margin: 0;
+  font-size: 34px;
+  line-height: 48px;
+}
+
+.App .Europe {
+  color: blue;
+}
+.App .America {
+  color: red;
+}
