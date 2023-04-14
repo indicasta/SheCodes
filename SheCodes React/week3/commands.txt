@@ -1,0 +1,27 @@
+npm 
+
+instalar paquetes 
+
+$npm i
+
+instalar nuevo paquete y add al package.json: 
+
+$npm i -P nombrePaquete (Producto Final, archivo compilado)
+$npm i -D nombrePaquete (Desarrollo Solo)
+
+Ejecucion
+$npm start
+
+yarn
+
+instalar paquetes del package.json
+
+$yarn
+
+
+$yarn add nombrePaquete (Production)
+$yarn add nombrePaquete save-dev (Development)
+
+
+Ejecucion
+$yarn start
