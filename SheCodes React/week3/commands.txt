@@ -25,3 +25,7 @@ $yarn add nombrePaquete save-dev (Development)
 
 Ejecucion
 $yarn start
+
+
+create react app from scratch
+npx create-react-app weather-app
