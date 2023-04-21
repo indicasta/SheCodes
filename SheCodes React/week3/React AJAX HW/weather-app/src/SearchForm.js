@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
-import WeatherByOpenWeather from "./WeatherByOpenWeather";
 
-export default function SearchForm() {
+export default function SearchForm({ setCity }) {
   const [CityToSearch, setCityToSearch] = useState("");
 
   // function handleSubmit(event) {
@@ -16,8 +15,7 @@ export default function SearchForm() {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        console.log({ CityToSearch });
-        return <WeatherByOpenWeather city={CityToSearch} />;
+        setCity(CityToSearch);
       }}
     >
       <input
