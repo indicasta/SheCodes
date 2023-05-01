@@ -29,10 +29,10 @@ export default function WeatherInfo({ loadingData, showData, weather }) {
             Humidity: <strong>{weather.data.main.humidity}%</strong>
           </li>
           <li text-transform="lowercase">
-            Wind: <strong>{weather.data.wind.speed}m/s</strong>
+            Wind: <strong>{weather.data.wind.speed}ms</strong>
           </li>
           <li>
-            <img src={url} alt="icon" />
+            <img src={url} alt="icon" className="icon" />
           </li>
         </ul>
       ) : (
