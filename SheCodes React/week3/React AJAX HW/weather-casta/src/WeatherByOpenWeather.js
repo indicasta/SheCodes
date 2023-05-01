@@ -23,6 +23,7 @@ export default function WeatherByOpenWeather() {
   }
 
   function getCity(newCity) {
+    setLoading(true);
     apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${newCity}&units=metric&appid=${apiKey}`;
     axios
       .get(apiUrl)
