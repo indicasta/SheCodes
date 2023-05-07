@@ -1,20 +1,22 @@
-import logo from "./logo.svg";
-import "./App.css";
-import SearchForm from "./SearchForm";
-import { useState } from "react";
-import WeatherByOpenWeather from "./WeatherByOpenWeather";
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-  const [city, setCity] = useState("");
   return (
     <div className="App">
-      <header className="App-info">
+      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>Weather App ⛅</h1>
-        <SearchForm setCity={setCity} />
-        <div>
-          <WeatherByOpenWeather city={city} />
-        </div>
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
       </header>
     </div>
   );
